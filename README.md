@@ -1,3 +1,5 @@
+A URL Scraper based on custom query. Exctracting content through Jina AI and summarizing using the BART summarizer on HuggingFace.
+
 # Project Setup and Run Guide
 
 This guide provides step-by-step instructions on how to set up and run the project.
