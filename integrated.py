@@ -70,7 +70,7 @@ def get_clean_content(url):
         "X-Engine": "direct"
     }
     
-    response = requests.get(api_endpoint, headers=headers)
+    response = requests.get(api_endpoint, headers=headers, timeout=60)
     
     if response.status_code == 200:
         return response.text
