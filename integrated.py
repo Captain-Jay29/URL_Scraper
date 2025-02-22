@@ -1,6 +1,5 @@
 # File: integrated_flow.py
 
-import requests
 from urllib.parse import quote
 from googlesearch import search
 import re
@@ -14,6 +13,7 @@ from nltk.tokenize import sent_tokenize
 import traceback
 import os
 from dotenv import load_dotenv
+from security import safe_requests
 
 load_dotenv()
 
@@ -70,7 +70,7 @@ def get_clean_content(url):
         "X-Engine": "direct"
     }
     
-    response = requests.get(api_endpoint, headers=headers)
+    response = safe_requests.get(api_endpoint, headers=headers)
     
     if response.status_code == 200:
         return response.text
